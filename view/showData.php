@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
 ?>
         <tr>
             <td class="p-3"><?php echo $row["word"] ; ?></td>
-            <td class="p-3"><?php echo $row["meaning"] ; ?></td>
+            <td class="p-3 text-center "><?php echo $row["meaning"] ; ?></td>
         </tr>
         <?php
   }
