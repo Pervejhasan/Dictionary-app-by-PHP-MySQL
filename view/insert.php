@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <title>Dictionary App By PHP MySQL</title>
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="../sass/main.css">
 </head>
 <body class="bg-background">
     <h2 class="d-flex justify-content-center mt-5 fs-1 text-decoration-underline">Insert Word</h2>
@@ -23,11 +23,27 @@
   <input type="submit" class="btn btn-button fw-bold" name="insert" value="Add Word"/>
 </form>
 
-   </div>
 
+<?php
+include "db.php";
+if(isset($_POST['insert'])){
+    $word=$_POST['word'];
+    $meaning=$_POST['meaning'];
+    $sql="INSERT INTO dictionary (word, meaning)
+    VALUES ('$word','$meaning')";
 
+// $query=mysqli_query($conn, $sql);
 
-
+if ($conn->query($sql) === TRUE) {
+  echo "<p class='p-3 mb-2 mt-2 rounded-3 bg-success text-white'>New word add successfully</p>";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+include './showData.php';
+}
+// mysqli_close($conn);
+?>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -30,8 +30,10 @@
   --bs-gray-900: #212529;
   --bs-background: #5a84d1;
   --bs-button: #6a39ad;
+  --bs-success: #0e661e;
   --bs-background-rgb: 90, 132, 209;
   --bs-button-rgb: 106, 57, 173;
+  --bs-success-rgb: 14, 102, 30;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
@@ -3330,6 +3332,23 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #6a39ad;
 }
 
+.btn-success {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0e661e;
+  --bs-btn-border-color: #0e661e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0c571a;
+  --bs-btn-hover-border-color: #0b5218;
+  --bs-btn-focus-shadow-rgb: 50, 125, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0b5218;
+  --bs-btn-active-border-color: #0b4d17;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0e661e;
+  --bs-btn-disabled-border-color: #0e661e;
+}
+
 .btn-outline-background {
   --bs-btn-color: #5a84d1;
   --bs-btn-border-color: #5a84d1;
@@ -3361,6 +3380,23 @@ fieldset:disabled .btn {
   --bs-btn-disabled-color: #6a39ad;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #6a39ad;
+  --bs-gradient: none;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #0e661e;
+  --bs-btn-border-color: #0e661e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0e661e;
+  --bs-btn-hover-border-color: #0e661e;
+  --bs-btn-focus-shadow-rgb: 14, 102, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0e661e;
+  --bs-btn-active-border-color: #0e661e;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #0e661e;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #0e661e;
   --bs-gradient: none;
 }
 
@@ -5234,6 +5270,16 @@ fieldset:disabled .btn {
   color: #331b53;
 }
 
+.alert-success {
+  --bs-alert-color: #083d12;
+  --bs-alert-bg: #cfe0d2;
+  --bs-alert-border-color: #b7d1bc;
+}
+
+.alert-success .alert-link {
+  color: #06310e;
+}
+
 @-webkit-keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -5622,6 +5668,22 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #402268;
   border-color: #402268;
+}
+
+.list-group-item-success {
+  color: #083d12;
+  background-color: #cfe0d2;
+}
+
+.list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
+  color: #083d12;
+  background-color: #bacabd;
+}
+
+.list-group-item-success.list-group-item-action.active {
+  color: #fff;
+  background-color: #083d12;
+  border-color: #083d12;
 }
 
 .btn-close {
@@ -7423,6 +7485,11 @@ fieldset:disabled .btn {
   background-color: RGBA(106, 57, 173, var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-success {
+  color: #fff !important;
+  background-color: RGBA(14, 102, 30, var(--bs-bg-opacity, 1)) !important;
+}
+
 .link-background {
   color: #5a84d1 !important;
 }
@@ -7437,6 +7504,14 @@ fieldset:disabled .btn {
 
 .link-button:hover, .link-button:focus {
   color: #552e8a !important;
+}
+
+.link-success {
+  color: #0e661e !important;
+}
+
+.link-success:hover, .link-success:focus {
+  color: #0b5218 !important;
 }
 
 .ratio {
@@ -7918,6 +7993,11 @@ fieldset:disabled .btn {
 .border-button {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-button-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-success {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-white {
@@ -8827,6 +8907,11 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-button-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-success {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
@@ -8886,6 +8971,11 @@ fieldset:disabled .btn {
 .bg-button {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-button-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
