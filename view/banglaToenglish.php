@@ -12,9 +12,6 @@
 <body class="bg-cyan-color">
     <a href="dictionary.php" class="btn btn-button mt-5 ms-5"> English to Bangla</a>
     <h1 class="text-center my-5"> Bangla To English Dictionary</h1>
-
-
-
     <form action="banglaToenglish.php" method="post" class="w-25 m-auto">
         <div class="mb-3">
             <input type="text" name="meaning" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -22,42 +19,26 @@
         </div>
         <input type="submit" class="btn btn-button px-3 fw-bold" name="search" value="Search" />
     </form>
-
-
-
     <table class="table table-dark table-hover mt-5 w-50 m-auto ">
-
         <?php
 include "db.php";
-
 if(isset($_POST["search"])){
-
     $meaning=$_POST["meaning"];
-
 $sql1="SELECT * from dictionary where meaning= '$meaning' ";
 $query1=mysqli_query($conn,$sql1);
 while($info=mysqli_fetch_array($query1)){
-
 ?>
-
         <tr>
-
             <td class="text-center"><?php echo $info['meaning'] ?><span style="margin-left:106px;">|</span></td>
 
             <td class="text-center"><?php echo  $info['word']        ?></td>
         </tr>
-
-
-
         <?php
 }
 }
 ?>
     </table>
-
-
     <!-- ============================================== -->
-
     <table class="table table-dark table-hover mt-5 w-50 m-auto ">
         <thead>
             <tr>
@@ -78,7 +59,6 @@ if ($conn->connect_error) {
       if ($result->num_rows > 0) { 
         while($row=$result->fetch_assoc()) {
            ?>
-
             <tr>
                 <td><?php echo $row['meaning'] ?></td>
                 <td><?php echo $row['word'] ?></td>
